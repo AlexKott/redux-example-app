@@ -1,6 +1,15 @@
 import * as t from '@/actions/types';
 
-const initialState = [];
+const initialState = [{
+  title: 'Green Book',
+  isWatched: true,
+}, {
+  title: 'Spider Man 24',
+  isWatched: false,
+}, {
+  title: 'Oblivion',
+  isWatched: true,
+}];
 
 export default (state = initialState, action = {}) => {
   const { type, payload } = action;

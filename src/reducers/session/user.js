@@ -14,4 +14,4 @@ export default (state = initialState, action = {}) => {
   return state;
 };
 
-export const getUser = state => state.session.user;
+export const getIsLoggedIn = state => state.session.user;

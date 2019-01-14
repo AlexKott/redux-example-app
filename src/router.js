@@ -1,8 +1,8 @@
-import MovieList from './components/MovieList';
+import Home from './components/Home';
 
 export default {
   INDEX: {
     path: '/',
-    component: MovieList,
+    component: Home,
   },
 };

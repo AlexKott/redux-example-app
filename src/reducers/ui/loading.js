@@ -12,4 +12,4 @@ export default (state = initialState, action = {}) => {
   return state;
 };
 
-export const getLoadingState = state => state.ui.loading;
+export const getIsLoading = state => state.ui.loading > 0;

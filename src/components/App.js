@@ -1,12 +1,24 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const mapStateToProps = ({ location }) => {
-  const route = location.type;
-  const RouteComponent = location.routesMap[route].component;
-  return { RouteComponent };
+import * as s from '@/selectors';
+
+import Loader from './Loader';
+
+const mapStateToProps = (state) => {
+  const route = state.location.type;
+  const RouteComponent = state.location.routesMap[route].component;
+  return {
+    RouteComponent,
+    isLoading: s.getIsLoading(state),
+  };
 };
 
-const App = ({ RouteComponent }) => <RouteComponent />;
+const App = ({ RouteComponent, isLoading }) => [
+  <Loader key='loader' isLoading={isLoading} />
+  ,
+  <RouteComponent key='route-comp' />
+  ,
+];
 
 export default connect(mapStateToProps)(App);
