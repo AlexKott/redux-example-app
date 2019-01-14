@@ -1,0 +1,40 @@
+{
+  "name": "redux-example-app",
+  "version": "1.0.0",
+  "description": "An example for state-driven design with redux",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexKott/redux-example-app.git"
+  },
+  "keywords": [
+    "Redux",
+    "React",
+    "State-driven",
+    "design"
+  ],
+  "author": "Alex Kott <alexander.kott@zweitag.de>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1",
+    "redux-first-router": "^2.1.1",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development"
+  }
+}
