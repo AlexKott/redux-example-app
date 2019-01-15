@@ -8,7 +8,7 @@ import ListItem from './ListItem';
 import '@/styles/list.css';
 
 const mapStateToProps = state => ({
-  movies: s.getAllMovies(state),
+  movies: s.getFilteredMovies(state),
 });
 
 const List = ({ movies = [] }) => (
