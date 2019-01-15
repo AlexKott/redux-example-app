@@ -4,7 +4,7 @@ import {
 
 import { connectRoutes } from 'redux-first-router';
 
-import routes from './router';
+import routes, { routerOptions } from './router';
 import * as reducers from './reducers';
 import * as middlewareModules from './middleware';
 
@@ -18,7 +18,7 @@ const {
   reducer: routerReducer,
   middleware: routerMiddleware,
   enhancer: routerEnhancer,
-} = connectRoutes(routes);
+} = connectRoutes(routes, routerOptions);
 
 // Generate store from reducers and enhancers
 const combinedReducers = combineReducers({

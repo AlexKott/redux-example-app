@@ -10,5 +10,5 @@ export const getFilteredMovies = createSelector(
     getAllMovies,
     getSearchFilter,
   ],
-  (movies, filter) => movies.filter(movie => movie.title.toLowerCase().includes(filter))
+  (movies, filter) => movies.filter(movie => movie.title.toLowerCase().includes(filter.toLowerCase()))
 );
