@@ -1,0 +1,9 @@
+.background {
+  position: fixed;
+  top: 6vw;
+  left: 0;
+  right: 0;
+  max-width: 1000px;
+  margin: auto;
+  pointer-events: none;
+}

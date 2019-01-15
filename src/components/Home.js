@@ -3,27 +3,28 @@ import { connect } from 'react-redux';
 
 import * as selectors from '@/selectors';
 
+import Background from './Background';
+import Controls from './Controls';
 import Filter from './Filter';
 import List from './List';
-import Header from './Header';
+
+import '@/styles/home.css';
 
 const mapStateToProps = state => ({
   isLoggedIn: selectors.getIsLoggedIn(state),
 });
 
-const Home = ({ isLoggedIn = false }) => {
-  if (isLoggedIn) {
-    return [
-      <Header key='page-header' />
-      ,
-      <Filter key='movie-filter' />
-      ,
-      <List key='movie-list' />
-      ,
-    ];
-  }
-
-  return <Header key='page-header' />;
-};
+const Home = ({ isLoggedIn = false }) => [
+  <h1 key='home-title' className='title'>My VHS List</h1>
+  ,
+  <Background key='vhs-background' />
+  ,
+  <div key='content-wrapper' className='content-wrapper'>
+    {isLoggedIn && <Filter />}
+    {isLoggedIn && <List />}
+    <Controls />
+  </div>
+  ,
+];
 
 export default connect(mapStateToProps)(Home);

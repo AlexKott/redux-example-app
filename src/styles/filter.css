@@ -1,6 +1,6 @@
 .filter__container {
-  margin-left: 20px;
-  width: 300px;
+  flex-grow: 1;
+  width: 20vw;
   display: flex;
   flex-direction: column;
 }

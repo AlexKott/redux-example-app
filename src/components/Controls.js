@@ -20,7 +20,7 @@ const Controls = ({
   onLogin,
   onLogout,
 }) => (
-  <div>
+  <div className='controls'>
     {isLoggedIn
       ? <button
         type='button'

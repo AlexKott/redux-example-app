@@ -1,0 +1,16 @@
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  max-width: 900px;
+  margin: auto;
+}
+
+.title {
+  font-family: 'Monoton', sans-serif;
+  font-size: 10vw;
+  margin: 0 auto;
+  text-align: center;
+  word-spacing: 0.3em;
+  color: #C1272D;
+}

@@ -1,15 +1,22 @@
 .list {
+  flex-grow: 1;
+  flex-basis: 40vw;
+  padding: 0 20px;
+  margin: 0 20px;
   list-style-type: none;
-  padding: 0;
-  width: 400px;
-  margin-left: 20px;
 }
 
 .list__item {
   padding: 6px;
-  margin: 3px 0;
+  margin: 4px 0;
   background-color: #ef9781;
   color: #333;
+  cursor: crosshair;
+  transition: opacity .3s, background-color .6s;
+}
+
+.list__item:hover {
+  opacity: .8;
 }
 
 .list__item.watched {
