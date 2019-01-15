@@ -1,26 +1,10 @@
-const mockData = {
-  1: {
-    title: 'Green Book',
-    isWatched: true,
-    id: 1,
-  },
-  2: {
-    title: 'Spider Man 24',
-    isWatched: false,
-    id: 2,
-  },
-  3: {
-    title: 'Oblivion',
-    isWatched: true,
-    id: 3,
-  },
-};
+import movies from './movies';
 
 export default {
   async fetch(dataType) {
     if (dataType === 'movies') {
       await delay();
-      return mockData;
+      return movies;
     }
   },
 };
