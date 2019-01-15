@@ -6,3 +6,10 @@ export const fetchData = dataType => ({
     dataType,
   },
 });
+
+export const markWatched = movieId => ({
+  type: t.MARK_WATCHED,
+  payload: {
+    movieId,
+  },
+});

@@ -1,15 +1,22 @@
 import * as t from '@/actions/types';
 
-const initialState = [{
-  title: 'Green Book',
-  isWatched: true,
-}, {
-  title: 'Spider Man 24',
-  isWatched: false,
-}, {
-  title: 'Oblivion',
-  isWatched: true,
-}];
+const initialState = {
+  1: {
+    title: 'Green Book',
+    isWatched: true,
+    id: 1,
+  },
+  2: {
+    title: 'Spider Man 24',
+    isWatched: false,
+    id: 2,
+  },
+  3: {
+    title: 'Oblivion',
+    isWatched: true,
+    id: 3,
+  },
+};
 
 export default (state = initialState, action = {}) => {
   const { type, payload } = action;
@@ -18,7 +25,18 @@ export default (state = initialState, action = {}) => {
     return payload.responseData;
   }
 
+  if (type === t.MARK_WATCHED) {
+    const movie = state[payload.movieId];
+    return {
+      ...state,
+      [payload.movieId]: {
+        ...movie,
+        isWatched: true,
+      },
+    };
+  }
+
   return state;
 };
 
-export const getAllMovies = state => state.data.movies;
+export const getAllMovies = state => Object.values(state.data.movies);

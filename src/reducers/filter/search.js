@@ -1,6 +1,6 @@
 import * as t from '@/actions/types';
 
-const initialState = 'Gre';
+const initialState = '';
 
 export default (state = initialState, action = {}) => {
   const { type, payload } = action;
