@@ -1,0 +1,10 @@
+.button {
+  -webkit-appearance: none;
+  background-color: #333;
+  color: #FCFDF3;
+  border: 0;
+  box-shadow: none;
+  height: 30px;
+  width: 80px;
+  font-size: 16px;
+}

@@ -1,0 +1,17 @@
+.list {
+  list-style-type: none;
+  padding: 0;
+  width: 400px;
+  margin-left: 20px;
+}
+
+.list__item {
+  padding: 6px;
+  margin: 3px 0;
+  background-color: #ef9781;
+  color: #333;
+}
+
+.list__item.watched {
+  background-color: #80e579;
+}

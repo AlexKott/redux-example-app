@@ -1,15 +1,15 @@
 import React from 'react';
 
-import MovieFilter from './MovieFilter';
-import MovieList from './MovieList';
-import PageHeader from './PageHeader';
+import Filter from './Filter';
+import List from './List';
+import Header from './Header';
 
 const Home = () => [
-  <PageHeader key='page-header' />
+  <Header key='page-header' />
   ,
-  <MovieFilter key='movie-filter' />
+  <Filter key='movie-filter' />
   ,
-  <MovieList key='movie-list' />
+  <List key='movie-list' />
   ,
 ];
 

@@ -5,6 +5,8 @@ import * as s from '@/selectors';
 
 import Loader from './Loader';
 
+import '@/styles/app.css';
+
 const mapStateToProps = (state) => {
   const route = state.location.type;
   const RouteComponent = state.location.routesMap[route].component;

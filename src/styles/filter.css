@@ -1,0 +1,16 @@
+.filter__container {
+  margin-left: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter {
+  display: block;
+  height: 32px;
+  font-size: 16px;
+  font-family: inherit;
+  color: #333;
+  margin: 3px 0;
+  padding: 3px;
+}
