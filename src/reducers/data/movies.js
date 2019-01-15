@@ -5,22 +5,35 @@ const initialState = {};
 export default (state = initialState, action = {}) => {
   const { type, payload } = action;
 
-  if (type === t.FETCH_DATA && payload.dataType === 'movies') {
-    return payload.responseData;
-  }
+  switch (type) {
+    case t.FETCH_DATA: {
+      if (payload.dataType === 'movies') {
+        return payload.responseData;
+      }
+      return state;
+    }
 
-  if (type === t.MARK_WATCHED) {
-    const movie = state[payload.movieId];
-    return {
-      ...state,
-      [payload.movieId]: {
-        ...movie,
-        isWatched: true,
-      },
-    };
-  }
+    case t.CLEAR_DATA: {
+      if (payload.dataType === 'movies') {
+        return initialState;
+      }
+      return state;
+    }
 
-  return state;
+    case t.MARK_WATCHED: {
+      const movie = state[payload.movieId];
+      return {
+        ...state,
+        [payload.movieId]: {
+          ...movie,
+          isWatched: true,
+        },
+      };
+    }
+
+    default:
+      return state;
+  }
 };
 
 export const getAllMovies = state => Object.values(state.data.movies);
